@@ -1,10 +1,16 @@
 require('dotenv').config();
 
-
+const MONGO_URL = "mongodb+srv://afdinki:ltfuTZ0FkXriBagm@cluster0.6i6bdn1.mongodb.net/";
+const mongoose = require('mongoose');
+mongoose.connect(MONGO_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 let Person;
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
+
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
